@@ -77,16 +77,16 @@ int Comand() {
         ReturnValue = 1;
     }
     if (!(strcmp(Mensagem, "/help"))) {
-        system("cls");
+        system("clear");
         printf("Digite /exit para sair.\nDigite /nick para mudar o seu nick.\nDigite /cls para limpar a tela de escrita.\nDigite /busca para buscar algo na conversa.\n");
         ReturnValue = 1;
     }
     if (!(strcmp(Mensagem, "/cls"))) {
-        system("cls");
+        system("clear");
         ReturnValue = 1;
     }
     if (!(strcmp(Mensagem, "/busca"))) {
-        system("cls");
+        system("clear");
         Busca();
         ReturnValue = 1;
     }
@@ -97,9 +97,9 @@ int main(int argc, char *argv[]) {
 
 
     if (strcmp(GetPassword(""), "obvia!")) {
-        system("cls");
+        system("clear");
         printf("PassWord Incorrect. Program will exit.\n");
-        system("pause");
+
         exit(2);
     }
     Local();
@@ -107,8 +107,8 @@ int main(int argc, char *argv[]) {
 
     while (Writer == NULL) {
         printf("Nao foi possivel abrir o arquivo em %s.\n", LOCAL);
-        system("pause");
-        system("cls");
+
+        system("clear");
         Local();
         Writer = fopen(LOCAL, "at");
     }
@@ -117,8 +117,8 @@ int main(int argc, char *argv[]) {
     printf("Digite o seu Nick :");
     gets(Nick);
     printf("\nSeja bem vindo %s!\n", Nick);
-    system("pause");
-    system("cls");
+
+    system("clear");
     hora[0] = '\0';
 
     while (1) {

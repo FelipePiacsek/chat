@@ -14,7 +14,7 @@ void Local() {
         printf("1)Publico\n2)Monitores\n3)Proprio diretorio\n4)Entrar com o endereco\n5)RM\n6)Sair");
         printf("\n|\n|\n|\n|----->");
         gets(opcao);
-        system("cls");
+        system("clear");
     }
     switch (atoi(opcao)) {
         case 1:
@@ -58,7 +58,7 @@ char *HORA() {
 
 char *GetPassword(char ReOrNot[]) {
     fflush(stdin);
-    system("cls");
+    system("clear");
     const char Frase[50] = "Type your password :";
     char Senha[50], PasswdAux[50];
     Senha[0] = '\0';
@@ -70,7 +70,7 @@ char *GetPassword(char ReOrNot[]) {
         PasswdAux[0] = getch();
         Senha[LCounter] = PasswdAux[0];
         fflush(stdin);
-        system("cls");
+        system("clear");
         if ((PasswdAux[0] == 8) && (LCounter > 0)) {
             LCounter--;
             Senha[LCounter] = '\0';
@@ -78,7 +78,7 @@ char *GetPassword(char ReOrNot[]) {
 
     }
     Senha[LCounter - 1] = '\0';
-    system("cls");
+    system("clear");
 
     return (Senha);
 }

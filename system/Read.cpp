@@ -9,17 +9,15 @@ Time :17:32
 
 int main(int argc, char *argv[]) {
     if (strcmp(GetPassword(""), "obvia!")) {
-        system("cls");
+        system("clear");
         printf("PassWord Incorrect. Program will exit.\n");
-        system("pause");
         exit(2);
     }
     Local();
     FILE *Reader = fopen(LOCAL, "r");
     while (Reader == NULL) {
         printf("Nao foi possivel ler o host em %s\n", LOCAL);
-        system("pause");
-        system("cls");
+        system("clear");
         Local();
         Reader = fopen(LOCAL, "r");
     }
